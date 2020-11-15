@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>CSS - このサイトについて</title>
+    
+    <meta name="viewport" content="width=600">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945753-1']);
+  _gaq.push(['_setDomainName', 'learnlayout.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+  </head>
+  <body class="ltr">
+
+    <div id="logo">
+      <a href="/">
+        <img src="images/logo.png">
+        <span>CSSレイアウトを学ぶ</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a class="home-link" href="/">ホーム</a>
+      <a href="toc.html">コンテンツ一覧</a>
+    </div>
+
+    <div id="container">
+
+      
+        <h1 class="content">このサイトについて</h1>
+      
+
+      <p class="content">
+  ブラウザの幅に合わせてボックスをいい感じに均等に配置する、グリッドレイアウトを作る事ができる。これは、昔から<code>float</code>を使って実現してきた。だが、今は<code>inline-block</code>を使って簡単に実現できる。<code>inline-block</code>要素は<code>inline</code>要素のようなものだ。だが、widthとheightを持つ事ができるという点で異なる。両方のやり方の例を見てみよう。
+</p>
+
+<div class="content">
+  <h2>難しい方法(floatを使用)</h2>
+</div>
+
+<style>
+  .box {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  }
+  .after-box {
+    clear: left;
+  }
+</style>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.after-box</span> <span class="p">{</span>
+  <span class="nl">clear</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p class="content">
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        私はfloatされているよ!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+
+  <section class="elem elem-green after-box">
+    <span class="label">&lt;div class="after-box"></span>
+    <p>
+      私はclearを使っている。だから、上のボックス達に続いてfloatされたりしない。
+    </p>
+    <span class="endlabel">&lt;/div></span>
+  </section>
+</p>
+
+<div class="content">
+  <h2>簡単な方法(inline-blockを使用)</h2>
+  <p>
+    同様の事を、<code>display</code>プロパティの値を<code>inline-block</code>にすることで実現できる。
+  </p>
+</div>
+
+<style>
+  .box2 {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  }
+</style>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.box2</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p class="content">
+  <!-- These are on same line because of how significant
+  whitespace works with inline-block. More info:
+  http://learnlayout.com/inline-block-layout.html -->
+  <div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div><div class="box2 elem"><span class="label">&lt;div class="box2"></span><p>私は、インラインブロックです!</p><span class="endlabel">&lt;/div></span></div>
+
+  <section class="elem elem-green">
+    <span class="label">&lt;div></span>
+    <p>
+      私は<code>clear</code>を使う必要はない。最高だね!
+    </p>
+    <span class="endlabel">&lt;/div></span>
+  </section>
+</p>
+
+<p class="content">
+  <code>inline-block</code>の<a href="http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/">IE6とIE7のサポート</a>には、さらに手間をかける必要がある。<code>inline-block</code>について、<code>hasLayout</code>と結びつけて話す人が時々いるだろう。だが、その話題は古いブラウザのサポートが必要な場合に限られるという事だけ知っておいてくれれば十分だ。興味があれば、IE6とIE7のサポートについての前記のリンクをたどってくれ。ともかく、続けよう。
+</p>
+
+      
+
+        <div class="nav-wrapper">
+
+          
+            <a class="nav prev" href="media-queries.html">前へ</a>
+          
+
+          
+            <a class="nav next" href="inline-block-layout.html">次へ</a>
+          
+
+        </div>
+
+      
+
+      
+        <footer>
+          15 / 19
+        </footer>
+      
+
+    </div>
+
+    <div id="share">
+
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://learnlayout.com/">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+
+      <li>
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+      </li>
+
+      <li>
+        <div class="g-plusone" data-size="medium"></div>
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      </li>
+
+      <li id="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png"></a>
+      </li>
+
+    </div>
+
+  </body>
+</html>

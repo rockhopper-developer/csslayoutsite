@@ -16,5 +16,10 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+        -v ${{ github.workspace }}:/srv/jekyll \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && mkdir templates/.jekyll-cache && chmod 777 templates/.jekyll-cache && echo 'lang: ja' > /tmp/_config.yml && jekyll build --source templates --destination _site --plugins _plugins --config /tmp/_config.yml"
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_dir: ./_site
